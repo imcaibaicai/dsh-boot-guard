@@ -1,0 +1,48 @@
+{
+  "name": "dsh-boot-guard",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 启动守卫与故障排查增强：前置注入防御畸形客户端插件，就地兜底隔离，提供脱机急救 CLI (dsh-rescue) 与健康状态快照。",
+  "type": "module",
+  "main": "lib/index.js",
+  "bin": {
+    "dsh-rescue": "./bin/dsh-rescue.mjs"
+  },
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "test": "node test/client.test.mjs && node test/guard.test.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "install.ps1",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "guard",
+    "rescue",
+    "diagnostics",
+    "troubleshooting"
+  ],
+  "license": "MIT"
+}
