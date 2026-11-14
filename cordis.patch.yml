@@ -1,0 +1,5 @@
+# dsh.bundle patch for dsh-boot-guard: inserts its plugin row into the profile roster.
+# Applied as a profile bundle layer via package.json dsh.bundle.patch.
+- insert:
+    - id: boot-guard
+      name: 'dsh-boot-guard'
